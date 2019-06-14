@@ -15,6 +15,6 @@ export type User = {
 export const getUser = (id: string): Promise<User> =>
   delay(2000).then(() =>
     fetch(`https://randomuser.me/api/?seed=${id}&inc=id,name,email`).then(
-      (res) => res.json().then(({ results }) => results[0])
+      (res) => res.json().then(({ results }) => ({ ...results[0], id }))
     )
   )

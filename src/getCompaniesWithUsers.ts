@@ -1,4 +1,4 @@
-import { Response } from 'express'
+import { Response, Request } from 'express'
 import { performance } from 'perf_hooks'
 
 import { getCompanies } from './do-not-modify/getCompanies'
@@ -11,7 +11,7 @@ type CompanyWithFullUsers = {
   users: User[]
 }
 
-export const getCompaniesWithUsers = async (_, res: Response) => {
+export const getCompaniesWithUsers = async (_: Request, res: Response) => {
   const startTime = performance.now()
 
   const companies = await getCompanies()
@@ -27,7 +27,6 @@ export const getCompaniesWithUsers = async (_, res: Response) => {
   // the `getUser` method and the `CompanyWithFullUsers` type
 
   res.json(response)
-  res.end()
 
   const endTime = performance.now()
   console.log(
