@@ -1,4 +1,11 @@
-export const getCompanies = async () => [
+export type Company = {
+  id: string
+  name: string
+  founded: number
+  users: string[]
+}
+
+export const getCompanies = async (): Promise<Company[]> => [
   {
     id: 'company-a',
     name: 'The Best Company',
