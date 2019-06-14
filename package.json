@@ -1,0 +1,22 @@
+{
+  "name": "fetch-em",
+  "version": "1.0.0",
+  "description": "Can you make the response faster?",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon --exec 'ts-node' src/index.ts"
+  },
+  "dependencies": {
+    "@types/express": "4.17.0",
+    "@types/node": "10.12.18",
+    "@types/node-fetch": "2.3.6",
+    "express": "4.16.4",
+    "node-fetch": "2.6.0",
+    "ts-node": "^8.2.0",
+    "typescript": "3.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4"
+  },
+  "keywords": []
+}
