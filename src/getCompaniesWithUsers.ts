@@ -4,7 +4,7 @@ import { performance } from 'perf_hooks'
 import { getCompanies } from './do-not-modify/getCompanies'
 import { getUser, User } from './do-not-modify/getUser'
 
-type CompanyWithFullUsers = {
+export type CompanyWithFullUsers = {
   id: string
   name: string
   founded: number
