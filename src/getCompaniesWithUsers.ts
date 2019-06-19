@@ -2,14 +2,8 @@ import { Response, Request } from 'express'
 import { performance } from 'perf_hooks'
 
 import { getCompanies } from './do-not-modify/getCompanies'
-import { getUser, User } from './do-not-modify/getUser'
-
-export type CompanyWithFullUsers = {
-  id: string
-  name: string
-  founded: number
-  users: User[]
-}
+import { getUser } from './do-not-modify/getUser'
+import { CompanyWithFullUsers } from './do-not-modify/types'
 
 export const getCompaniesWithUsers = async (_: Request, res: Response) => {
   const startTime = performance.now()

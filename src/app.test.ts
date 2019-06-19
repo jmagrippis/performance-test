@@ -1,9 +1,11 @@
 import * as request from 'supertest'
 
 import { app } from './app'
-import { CompanyWithFullUsers } from './getCompaniesWithUsers'
+import { CompanyWithFullUsers } from './do-not-modify/types'
 
 describe('root', () => {
+  jest.setTimeout(30000)
+
   it('should return a list of all Companies', async () => {
     const companies: CompanyWithFullUsers[] = (await request(app).get('/')).body
 

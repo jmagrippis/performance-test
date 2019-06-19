@@ -1,9 +1,4 @@
-export type Company = {
-  id: string
-  name: string
-  founded: number
-  users: string[]
-}
+import { Company } from './types'
 
 export const getCompanies = async (): Promise<Company[]> => [
   {
